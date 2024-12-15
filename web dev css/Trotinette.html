@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter une Trottinette</title>
+</head>
+<body>
+
+    <h1>Ajouter une Trottinette</h1>
+    
+    <form action="#" method="post">
+        <label>ID de la Trottinette *</label>
+        <input type="text" minlength="5" required><br><br>
+        
+        <label>Niveau de Batterie (%) *</label>
+        <input type="number" min="0" max="100" required><br><br>
+        
+        <label>Statut *</label>
+        <select name="statut" required>
+            <option>Disponible</option>
+            <option>Réservée</option>
+            <option>Maintenance</option>
+        </select><br><br>
+        
+        <fieldset>
+            <legend>Position</legend>
+            <label>Latitude :</label>
+            <input type="number" max="999999"><br><br>
+            
+            <label>Longitude :</label>
+            <input type="number" max="999999"><br><br>
+        </fieldset>
+        
+        <button type="submit">Ajouter la Trottinette</button>
+    </form>
+
+</body>
+</html>

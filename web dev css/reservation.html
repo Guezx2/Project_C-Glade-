@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation de Trottinette</title>
+    <link rel="stylesheet" href="styleres.css">
+</head>
+<body>
+    <h1>Réservation de Trottinette</h1>
+    <form action="#" method="post">
+        <label>ID de la Trottinette *</label>
+        <input type="text" name="id_trottinette" placeholder="Ex: TROT12345" required pattern="TROT[0-9]{5}" title="L'ID doit commencer par 'TROT' suivi de 5 chiffres."><br><br>
+
+        <label>Nom de l'Utilisateur *</label>
+        <input type="text" name="nom_utilisateur" placeholder="Votre nom complet" required pattern="[A-Za-zÀ-ÿ\s\-']{2,}" title="Le nom doit contenir uniquement des lettres, espaces, tirets et apostrophes, avec un minimum de 2 caractères."><br><br>
+
+        <label>Email *</label>
+        <input type="email" name="email" placeholder="exemple@domaine.com" required><br><br>
+
+        <label>Numéro de Téléphone *</label>
+        <input type="tel" name="numero_tel" placeholder="216xxxxxxxxx" required pattern="216[0-9]{8}" title="Le numéro doit commencer par '216' suivi de 8 chiffres sans espaces."><br><br>
+
+        <label>Date de Réservation *</label>
+        <input type="date" name="date_reservation" required min="<?= date('Y-m-d'); ?>"><br><br>
+
+        <label>Heure de Début *</label>
+        <input type="time" name="heure_debut" required><br><br>
+
+        <label>Durée de la Réservation (en heures) *</label>
+        <input type="number" name="duree_reservation" placeholder="Ex: 2" required><br><br>
+
+        <input type="submit" value="Réserver la Trottinette">
+        
+    </form>
+</body>
+</html>
